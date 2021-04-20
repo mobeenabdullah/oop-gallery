@@ -1,6 +1,4 @@
 <?php include("includes/header.php"); ?>
-
-
         <div class="row">
 
             <!-- Blog Entries Column -->
