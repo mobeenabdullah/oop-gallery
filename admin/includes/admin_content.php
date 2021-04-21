@@ -15,18 +15,11 @@
                     <i class="fa fa-file"></i> Blank Page
                 </li>
             </ol>
-
             <?php
 
-            $sql = "SELECT * FROM users WHERE id=1";
+            $found_user = User::find_user_by_id(1);
 
-            $database = new Database();
-
-            $result = $database->query($sql);
-
-            $user_found = mysqli_fetch_array($result);
-
-            echo $user_found['username'];
+            echo $found_user->username;
 
             ?>
         </div>
