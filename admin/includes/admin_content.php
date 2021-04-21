@@ -17,9 +17,14 @@
             </ol>
             <?php
 
-            $found_user = User::find_user_by_id(1);
+            $user = new User();
 
-            echo $found_user->username;
+            $user->username = "jsmith";
+            $user->password = "jsmith123";
+            $user->first_name = "John";
+            $user->last_name = "Smith";
+
+            $user->create();
 
             ?>
         </div>
