@@ -17,14 +17,11 @@
             </ol>
             <?php
 
-            $user = new User();
+            $user = User::find_user_by_id(3);
 
-            $user->username = "jsmith";
-            $user->password = "jsmith123";
-            $user->first_name = "John";
-            $user->last_name = "Smith";
+            $user->last_name = "Victor";
 
-            $user->create();
+            $user->update();
 
             ?>
         </div>
