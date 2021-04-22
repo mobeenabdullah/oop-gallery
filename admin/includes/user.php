@@ -89,4 +89,18 @@ class User {
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
+    public function delete() {
+        global $database;
+
+        $sql = "DELETE FROM users ";
+        $sql .= " WHERE id= " . $database->escape_string($this->id);
+        $sql .= " LIMIT 1";
+
+        //print_r($sql); exit;
+
+        $database->query($sql);
+
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
+
 }

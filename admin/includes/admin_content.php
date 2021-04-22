@@ -17,11 +17,9 @@
             </ol>
             <?php
 
-            $user = User::find_user_by_id(3);
+            $user = User::find_user_by_id(2);
 
-            $user->last_name = "Victor";
-
-            $user->update();
+            $user->delete();
 
             ?>
         </div>
