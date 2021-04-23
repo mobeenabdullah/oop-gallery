@@ -17,13 +17,13 @@
             </ol>
             <?php
 
-            $user = User::find_user_by_id(6);
+            //$user = User::find_user_by_id(6);
 //            $user->username = "hello";
 //            $user->password = "hello123";
 //            $user->first_name = "Hello";
 //            $user->last_name = "123";
 //            $user->create();
-            $user->delete();
+//            $user->delete();
 
 //            $user = new User();
 //            $user->username = "hello";
