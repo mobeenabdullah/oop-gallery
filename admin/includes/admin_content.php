@@ -26,8 +26,19 @@
 //            $user->delete();
 
 //            $user = new User();
-//            $user->username = "hello";
+//            $user->username = "jolly";
 //            $user->save();
+
+            $photo = new Photo();
+            $photo->title = "Bike";
+            $photo->description = "This is a bike Photo";
+            $photo->size = 20;
+            $photo->create();
+
+//            $photos = Photo::find_all();
+//            foreach ($photos as $photo) {
+//                echo $photo->title;
+//            }
 
             ?>
         </div>
