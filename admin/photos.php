@@ -1,10 +1,6 @@
 <?php include("includes/header.php"); ?>
 <?php if(!$session->is_signed_in()) { redirect("login.php"); } ?>
-<?php
-
-    $photos = Photo::find_all();
-
-?>
+<?php $photos = Photo::find_all(); ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -38,7 +34,14 @@
                             <tbody>
                             <?php foreach ($photos as $photo) : ?>
                                 <tr>
-                                    <td><img src="<?php echo $photo->picture_path(); ?>" alt="" style="max-width: 100px;"></td>
+                                    <td>
+                                        <img src="<?php echo $photo->picture_path(); ?>" alt="" style="max-width: 100px;">
+                                        <div class="pictures_link">
+                                            <a href="delete_photo.php/?id=<?php echo $photo->id; ?>">Delete</a>
+                                            <a href="#">Edit</a>
+                                            <a href="#">View</a>
+                                        </div>
+                                    </td>
                                     <td><?php echo $photo->id; ?></td>
                                     <td><?php echo $photo->filename; ?></td>
                                     <td><?php echo $photo->title; ?></td>

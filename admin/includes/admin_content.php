@@ -17,7 +17,7 @@
             </ol>
             <?php
 
-            //$user = User::find_user_by_id(6);
+            //$user = User::find_by_id(6);
 //            $user->username = "hello";
 //            $user->password = "hello123";
 //            $user->first_name = "Hello";
@@ -29,11 +29,11 @@
 //            $user->username = "jolly";
 //            $user->save();
 
-            $photo = new Photo();
-            $photo->title = "Bike";
-            $photo->description = "This is a bike Photo";
-            $photo->size = 20;
-            $photo->create();
+//            $photo = new Photo();
+//            $photo->title = "Bike";
+//            $photo->description = "This is a bike Photo";
+//            $photo->size = 20;
+//            $photo->create();
 
 //            $photos = Photo::find_all();
 //            foreach ($photos as $photo) {
